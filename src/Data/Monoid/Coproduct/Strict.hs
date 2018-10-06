@@ -1,5 +1,6 @@
 {-# LANGUAGE BangPatterns          #-}
 {-# LANGUAGE FlexibleInstances     #-}
+{-# LANGUAGE MonoLocalBinds        #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE RankNTypes            #-}
 {-# LANGUAGE TypeOperators         #-}
@@ -31,10 +32,10 @@ module Data.Monoid.Coproduct.Strict
 
   ) where
 
-import Control.Applicative
-import Data.Monoid.Action
-import Data.Monoid.WithSemigroup
-import Data.Semigroup
+import           Control.Applicative
+import           Data.Monoid.Action
+import           Data.Monoid.WithSemigroup
+import           Data.Semigroup
 
 -- Internal strict version of 'Data.Semigroup.Option'
 data Possible a = Only !a | Nought
